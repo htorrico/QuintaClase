@@ -33,17 +33,18 @@ namespace QuintaClase
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.btnNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPersonas
             // 
             this.dgvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPersonas.Location = new System.Drawing.Point(195, 175);
+            this.dgvPersonas.Location = new System.Drawing.Point(185, 200);
             this.dgvPersonas.Name = "dgvPersonas";
             this.dgvPersonas.RowHeadersWidth = 51;
             this.dgvPersonas.RowTemplate.Height = 24;
-            this.dgvPersonas.Size = new System.Drawing.Size(498, 150);
+            this.dgvPersonas.Size = new System.Drawing.Size(521, 150);
             this.dgvPersonas.TabIndex = 0;
             // 
             // btnBuscar
@@ -70,11 +71,22 @@ namespace QuintaClase
             this.txtApellidos.Size = new System.Drawing.Size(100, 22);
             this.txtApellidos.TabIndex = 3;
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(185, 159);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.btnBuscar);
@@ -93,6 +105,7 @@ namespace QuintaClase
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.TextBox txtApellidos;
+        internal System.Windows.Forms.Button btnNuevo;
     }
 }
 

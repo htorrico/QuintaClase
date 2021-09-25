@@ -14,5 +14,14 @@ namespace Business
             DPersona dPersona = new DPersona();
             return dPersona.GetPersonas(persona);
         }
+
+        public void InsPersona (Persona persona)
+        {
+            DPersona dPersona = new DPersona();
+            dPersona.InsPersona(persona);
+
+        }
+
+
     }
 }

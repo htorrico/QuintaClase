@@ -36,5 +36,11 @@ namespace QuintaClase
             dgvPersonas.Refresh();
 
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            MntoPersonas mntoPersonas = new MntoPersonas();
+            mntoPersonas.ShowDialog();
+        }
     }
 }

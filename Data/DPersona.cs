@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-☺using System.Linq;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,6 +37,9 @@ namespace Data
                     {
                         Nombres = reader["Nombres"] != null ? Convert.ToString(reader["Nombres"]) : "",
                         Apellidos = reader["Apellidos"] != null ? Convert.ToString(reader["Apellidos"]) : "",
+                        FechaNacimiento= reader["FechaNacimiento"] != null ? Convert.ToDateTime(reader["FechaNacimiento"]) : DateTime.Now,
+                        FechaIngreso = reader["FechaIngreso"] != null ? Convert.ToDateTime(reader["FechaIngreso"]) : DateTime.Now
+
                     });
                 }
 
@@ -46,7 +49,7 @@ namespace Data
 
      public void InsPersona(Persona persona)
         {
-            string commandText = "USP_BuscarPersonas";
+            string commandText = "USP_InsertarPersonas";
             SqlParameter[] parameters = null;
 
             parameters = new SqlParameter[4];
@@ -55,10 +58,12 @@ namespace Data
             parameters[1] = new SqlParameter("@Apellidos", SqlDbType.VarChar);
             parameters[1].Value = persona.Apellidos;
             parameters[2] = new SqlParameter("@FechaNacimiento", SqlDbType.DateTime);
-            parameters[2].Value = persona.Apellidos;
+            parameters[2].Value = persona.FechaNacimiento;
             parameters[3] = new SqlParameter("@FechaIngreso", SqlDbType.VarChar);
-            parameters[3].Value = persona.Apellidos;
+            parameters[3].Value = persona.FechaIngreso;
 
+            SqlHelper.EjecutarSentenciaSQL(SqlHelper.Connection, commandText,
+                CommandType.StoredProcedure, parameters);
 
         }
 
