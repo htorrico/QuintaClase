@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{E0089BDE-FAB5-4445-83F4-0D67754848C0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Querys", "Querys", "{B13CF317-2462-4813-84DB-7E58BB660205}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\OneDrive\Escritorio\PersonasQuery.sql = ..\..\..\OneDrive\Escritorio\PersonasQuery.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
